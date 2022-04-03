@@ -7,9 +7,13 @@ let list = document.querySelector('#List');
 let RmList = document.getElementsByClassName('.Check');
 let ListRm = document.getElementsByClassName('.List1');
 let addDiv = document.createElement('div');
+let RmAll = document.querySelector("#RmToDoAll");
+
+
+
+
+
 page.addEventListener('submit',submit);
-
-
 function submit(event){
 event.preventDefault();
 let Li = document.createElement('li');
@@ -51,7 +55,16 @@ RemoveTd.addEventListener('click',function(){
     }
     });
     
+RmAll.addEventListener('click',function(){
+    let allItems = document.querySelectorAll('#List div');
+    for (let i = 0; i < allItems.length; i++) {
+        let removeItem = allItems[i];
+        removeItem.remove();
 
+    
+    
+    }
+});
 
 
 

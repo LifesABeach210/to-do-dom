@@ -1,0 +1,17 @@
+#Page{
+padding-top: 300px;
+display: flex;
+align-items:  center;
+flex-direction: column;
+background-image:repeating-linear-gradient(orange,gray);
+}
+body{
+    
+}
+
+li{
+font-style: oblique;
+color: floralwhite;
+
+
+}
