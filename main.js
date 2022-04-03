@@ -18,6 +18,8 @@ let addDiv = document.createElement('div');
 list.appendChild(addDiv);
 addDiv.appendChild(Li);
 InputTodo.value = '';
+
+
 addDiv.addEventListener('click',function(){
     if (addDiv.style.textDecoration==="") {
         addDiv.style.textDecoration = 'line-through';
@@ -27,23 +29,8 @@ addDiv.addEventListener('click',function(){
     }
     });
     
-function removeChild(){
-    if (addDiv.style.textDecoration==='line-through') {
-        addDiv.remove();
-        }else{ addDiv.style.textDecoration = "";
-    
-    
-    }
-    
-    RemoveTd.addEventListener('click',removeChild());
-
-
-
-
-
-
-
 }
+
 
 function deleteAllHandler(){
     //document.getElementById('todolist').innerHTML = '';
@@ -54,8 +41,16 @@ function deleteAllHandler(){
 
 
 
-
-
+RemoveTd.addEventListener('click',function(){
+    let allItems = document.querySelectorAll('#Page div');
+    for (let i = 0; i < allItems.length; i++) {
+        let removeItem = allItems[i];
+        if (removeItem.style.textDecoration === 'line-through') {
+            removeItem.remove();
+        }
+    }
+    });
+    
 
 
 
